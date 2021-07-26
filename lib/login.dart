@@ -21,7 +21,7 @@ class _LoginScreenState extends State<LoginScreen> {
                 flex: 2,
                 child: SizedBox(
                   height: 80.0,
-                  width: 180,
+                  width: 230,
                   child: Image.asset(
                     "assets/icons/logo.jpg",
                     fit: BoxFit.contain,
@@ -53,13 +53,26 @@ class _LoginScreenState extends State<LoginScreen> {
                 onPressed: () {
                   //forgot password screen
                 },
-                child: Text('Forgot Password'),
+                child: Text(
+                  'Forgot Password?',
+                  style: TextStyle(
+                    color: Color(0xFF8591A1),
+                  ),
+                ),
               ),
               Container(
                 height: 50,
                 padding: EdgeInsets.only(bottom: 5),
                 child: ElevatedButton(
-                  child: Text('Login'),
+                  child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 50),
+                    child: Text(
+                      'Login',
+                      style: TextStyle(
+                        color: Color(0xFF1E3352),
+                      ),
+                    ),
+                  ),
                   onPressed: () {
                     print(usernameController.text);
                     print(passwordController.text);
@@ -71,11 +84,19 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Container(
                       child: Column(
                     children: <Widget>[
-                      Text("Don't have an account?"),
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(
+                          color: Color(0xFF8591A1),
+                        ),
+                      ),
                       TextButton(
                         child: Text(
                           'Create an account',
-                          style: TextStyle(fontSize: 20),
+                          style: TextStyle(
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
                         ),
                         onPressed: () {
                           //signup screen

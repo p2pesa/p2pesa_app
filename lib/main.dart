@@ -11,6 +11,15 @@ void main() {
         scaffoldBackgroundColor: const Color(0xFF000000),
         brightness: Brightness.dark,
         primaryColor: Color(0xFFFFFFFF),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            primary: Color(0xFF54F5D8),
+            textStyle: TextStyle(
+              color: Color(0xFF1E3352),
+            ),
+            padding: EdgeInsets.symmetric(horizontal: 10),
+          ),
+        ),
       ),
       initialRoute: '/',
       routes: {
