@@ -8,7 +8,7 @@ void main() {
     MaterialApp(
       title: 'Pesa 2 Pesa',
       theme: ThemeData(
-        scaffoldBackgroundColor: const Color(0xFF0A2042),
+        scaffoldBackgroundColor: const Color(0xFF000000),
         brightness: Brightness.dark,
         primaryColor: Color(0xFFFFFFFF),
       ),

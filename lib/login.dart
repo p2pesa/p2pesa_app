@@ -15,13 +15,17 @@ class _LoginScreenState extends State<LoginScreen> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(10),
-          child: ListView(
+          child: Column(
             children: <Widget>[
-              SizedBox(
-                height: 50.0,
-                child: Image.asset(
-                  "assets/icons/logo.jpg",
-                  fit: BoxFit.contain,
+              Expanded(
+                flex: 2,
+                child: SizedBox(
+                  height: 80.0,
+                  width: 180,
+                  child: Image.asset(
+                    "assets/icons/logo.jpg",
+                    fit: BoxFit.contain,
+                  ),
                 ),
               ),
               Container(
@@ -62,23 +66,24 @@ class _LoginScreenState extends State<LoginScreen> {
                   },
                 ),
               ),
-              Container(
-                  child: Row(
-                children: <Widget>[
-                  Text("Don't have an a account?"),
-                  FlatButton(
-                    textColor: Colors.white,
-                    child: Text(
-                      'Sign in',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                    onPressed: () {
-                      //signup screen
-                    },
-                  )
-                ],
-                mainAxisAlignment: MainAxisAlignment.center,
-              ))
+              Expanded(
+                  flex: 1,
+                  child: Container(
+                      child: Column(
+                    children: <Widget>[
+                      Text("Don't have an account?"),
+                      TextButton(
+                        child: Text(
+                          'Create an account',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                        onPressed: () {
+                          //signup screen
+                        },
+                      ),
+                    ],
+                    mainAxisAlignment: MainAxisAlignment.center,
+                  ))),
             ],
           ),
         ),
